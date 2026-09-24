@@ -1,11 +1,11 @@
 <div align="center">
 
-# <img src="https://api.iconify.design/tabler:layout-dashboard.svg?color=%236c8cff&width=40" width="34" style="vertical-align:middle" /> Portfolio
+# <img src="https://api.iconify.design/tabler:layout-dashboard.svg?color=%23ff9a00&width=40" width="34" style="vertical-align:middle" /> Portfolio
 
 **"Hi, I'm Master Guilliver F. Jaravata, a BSIT student sharpening my fundamentals while I work toward a career in networking and systems administration."**
 
-<img src="https://img.shields.io/badge/status-live-6c8cff?style=for-the-badge&labelColor=0a0e1a" />
-<img src="https://img.shields.io/badge/design-dark%20%2B%20glassmorphism-b06cff?style=for-the-badge&labelColor=0a0e1a" />
+<img src="https://img.shields.io/badge/status-live-ff9a00?style=for-the-badge&labelColor=0a0a0a" />
+<img src="https://img.shields.io/badge/design-dark%20%2B%20glassmorphism-ff3b30?style=for-the-badge&labelColor=0a0a0a" />
 
 <br />
 
