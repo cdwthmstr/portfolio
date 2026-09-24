@@ -32,7 +32,7 @@ A single-page portfolio site, dark mode with a glassmorphism look (frosted glass
 - **Hero** with intro, resume download, and social links
 - **About** section with education, focus areas, and quick facts
 - **Skills**, grouped by core languages, full-stack tools, databases, and networking fundamentals
-- **Projects**, flagship capstone system with a screenshot gallery, plus a supporting project
+- **Projects**, flagship capstone system with a screenshot gallery, plus three supporting projects
 - **Resume** section with a one-click PDF download
 - **Contact** form (mailto handoff) plus direct contact info
 - Mobile nav, scroll-spy active links, and scroll-reveal animations, all vanilla JS
