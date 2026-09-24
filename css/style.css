@@ -319,19 +319,19 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: clamp(480px, 88vh, 980px);
-  margin-bottom: 36px;
+  min-height: clamp(340px, 56vh, 560px);
+  margin-bottom: 28px;
 }
 
 .hero-flank-left {
-  flex: 1 1 260px;
-  max-width: 280px;
+  flex: 1 1 340px;
+  max-width: 400px;
   position: relative;
   z-index: 2;
 }
 
 .hero-flank-left .btn-primary {
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }
 
 .hero-flank-left .btn-outline {
@@ -378,7 +378,7 @@ h1, h2, h3 {
   left: 50%;
   top: clamp(-90px, -8vw, -40px);
   transform: translateX(-50%);
-  height: clamp(400px, 78vh, 880px);
+  height: clamp(300px, 56vh, 560px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
