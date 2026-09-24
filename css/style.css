@@ -330,12 +330,11 @@ h1, h2, h3 {
   z-index: 2;
 }
 
-.hero-flank-left .btn-primary {
+.hero-flank-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
   margin-bottom: 20px;
-}
-
-.hero-flank-left .btn-outline {
-  margin-top: 4px;
 }
 
 .hero-flank-right {
@@ -412,9 +411,10 @@ h1, h2, h3 {
 }
 
 .hero-tagline {
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-size: clamp(0.85rem, 1.4vw, 1.1rem);
   font-weight: 500;
   color: var(--text-secondary);
+  white-space: nowrap;
   margin-bottom: 16px;
 }
 
@@ -1009,6 +1009,14 @@ h1, h2, h3 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  .hero-tagline {
+    white-space: normal;
+  }
+
+  .hero-flank-actions {
+    justify-content: center;
+  }
+
   .hero-flank {
     display: block;
     min-height: 0;
