@@ -106,8 +106,8 @@ contactForm.addEventListener('submit', (e) => {
   const subject = encodeURIComponent(`Portfolio contact from ${name}`);
   const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
 
-  window.location.href = `mailto:cdwthmstr@gmail.com?subject=${subject}&body=${body}`;
-  formNote.textContent = "Opening your email app... if nothing happens, email me directly at cdwthmstr@gmail.com";
+  window.location.href = `mailto:mjaravata.work@gmail.com?subject=${subject}&body=${body}`;
+  formNote.textContent = "Opening your email app... if nothing happens, email me directly at mjaravata.work@gmail.com";
 });
 
 // ---------- Footer year ----------
