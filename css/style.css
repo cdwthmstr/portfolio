@@ -320,20 +320,31 @@ h1, h2, h3 {
 
 .hero-name-big {
   font-family: 'Archivo Black', var(--font-heading);
-  font-size: clamp(2.8rem, 7.8vw, 7rem);
+  font-size: clamp(2.8rem, 8.5vw, 6.6rem);
   font-weight: 400;
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: -0.01em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hero-name-outline {
+  color: var(--text-primary);
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  .hero-name-outline {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--text-primary);
+  }
 }
 
 .hero-photo {
-  display: inline-block;
-  height: 2.5em;
+  display: block;
+  height: clamp(130px, 15vw, 240px);
   width: auto;
   object-fit: contain;
-  vertical-align: middle;
-  margin: 0 0.05em;
+  margin: clamp(-70px, -6vw, -40px) auto 0;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
   position: relative;
   z-index: 1;
@@ -1003,6 +1014,11 @@ h1, h2, h3 {
 }
 
 @media (max-width: 720px) {
+  .hero-name-big {
+    white-space: normal;
+    font-size: clamp(2.4rem, 12vw, 3.8rem);
+  }
+
   .navbar-inner .status-pill {
     display: none;
   }
@@ -1070,10 +1086,4 @@ h1, h2, h3 {
     align-items: stretch;
   }
 
-  .hero-photo {
-    display: block;
-    height: 3.2em;
-    width: auto;
-    margin: 0.1em 0;
-  }
 }
