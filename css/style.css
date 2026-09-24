@@ -581,7 +581,8 @@ h1, h2, h3 {
   box-shadow: var(--shadow-glow);
 }
 
-.work-card.hidden {
+.work-card.hidden,
+.timeline-row.hidden {
   display: none;
 }
 

@@ -112,19 +112,21 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
   });
 });
 
-// ---------- Work filter tabs ----------
-const filterTabs = document.querySelectorAll('.filter-tab');
-const workCards = document.querySelectorAll('.work-card');
+// ---------- Filter tabs (Work, Path, etc.) ----------
+document.querySelectorAll('.filter-group').forEach((group) => {
+  const tabs = group.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll(group.dataset.target);
 
-filterTabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    filterTabs.forEach((t) => t.classList.remove('active'));
-    tab.classList.add('active');
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
 
-    const filter = tab.dataset.filter;
-    workCards.forEach((card) => {
-      const matches = filter === 'all' || card.dataset.category === filter;
-      card.classList.toggle('hidden', !matches);
+      const filter = tab.dataset.filter;
+      cards.forEach((card) => {
+        const matches = filter === 'all' || card.dataset.category === filter;
+        card.classList.toggle('hidden', !matches);
+      });
     });
   });
 });

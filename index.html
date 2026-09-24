@@ -91,7 +91,7 @@
           <a href="https://github.com/cdwthmstr" target="_blank" rel="noopener" class="view-all-link">View GitHub Profile <span class="arrow">&#8599;</span></a>
         </div>
 
-        <div class="work-filters reveal">
+        <div class="work-filters filter-group reveal" data-target=".work-card">
           <button class="filter-tab active" data-filter="all">All</button>
           <button class="filter-tab" data-filter="capstone">Capstone</button>
           <button class="filter-tab" data-filter="coursework">Coursework</button>
@@ -313,13 +313,19 @@
         <p class="section-eyebrow reveal">/Education &amp; Certifications</p>
         <h2 class="section-title reveal">The Path So Far</h2>
 
+        <div class="work-filters filter-group reveal" data-target=".timeline-row">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="education">Education</button>
+          <button class="filter-tab" data-filter="certification">Certifications</button>
+        </div>
+
         <div class="timeline-card reveal">
           <div class="timeline-card-header">
             <span>Currently pursuing BSIT</span>
             <span class="timeline-badge">5 Certifications</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="education">
             <div>
               <h3>BS Information Technology</h3>
               <p class="timeline-sub">Dalubhasaang Politekniko ng Lungsod ng Baliwag, Institute of Information Technology and Innovation</p>
@@ -327,7 +333,7 @@
             <span class="timeline-date">Expected 2026</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="certification">
             <div>
               <h3><a href="assets/certificates/basic-web-development-workshop-zuitt.pdf" target="_blank" rel="noopener">Basic Web Development Workshop</a></h3>
               <p class="timeline-sub">Zuitt</p>
@@ -335,7 +341,7 @@
             <span class="timeline-date">Nov 2024</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="certification">
             <div>
               <h3><a href="assets/certificates/getting-started-with-cisco-packet-tracer.pdf" target="_blank" rel="noopener">Getting Started with Cisco Packet Tracer</a></h3>
               <p class="timeline-sub">Cisco Networking Academy</p>
@@ -343,7 +349,7 @@
             <span class="timeline-date">Feb 2026</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="certification">
             <div>
               <h3><a href="assets/certificates/computer-hardware-basics.pdf" target="_blank" rel="noopener">Computer Hardware Basics</a></h3>
               <p class="timeline-sub">Cisco Networking Academy</p>
@@ -351,7 +357,7 @@
             <span class="timeline-date">Feb 2026</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="certification">
             <div>
               <h3><a href="assets/certificates/exploring-networking-with-cisco-packet-tracer.pdf" target="_blank" rel="noopener">Exploring Networking with Cisco Packet Tracer</a></h3>
               <p class="timeline-sub">Cisco Networking Academy</p>
@@ -359,7 +365,7 @@
             <span class="timeline-date">Feb 2026</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="certification">
             <div>
               <h3><a href="assets/certificates/exploring-iot-with-cisco-packet-tracer.pdf" target="_blank" rel="noopener">Exploring Internet of Things with Cisco Packet Tracer</a></h3>
               <p class="timeline-sub">Cisco Networking Academy</p>
@@ -367,7 +373,7 @@
             <span class="timeline-date">Feb 2026</span>
           </div>
 
-          <div class="timeline-row">
+          <div class="timeline-row" data-category="education">
             <div>
               <h3>Secondary Education</h3>
               <p class="timeline-sub">Pres. Diosdado P. Macapagal Memorial High School</p>
