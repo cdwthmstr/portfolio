@@ -7,7 +7,11 @@
 <img src="https://img.shields.io/badge/status-live-6c8cff?style=for-the-badge&labelColor=0a0e1a" />
 <img src="https://img.shields.io/badge/design-dark%20%2B%20glassmorphism-b06cff?style=for-the-badge&labelColor=0a0e1a" />
 
+<br />
+
 <img src="https://skillicons.dev/icons?i=html,css,js,vercel" />
+
+<br />
 
 <p>
   <a href="#features">Features</a> &middot;
