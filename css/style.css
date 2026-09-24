@@ -319,13 +319,13 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: clamp(380px, 64vh, 660px);
+  min-height: clamp(420px, 76vh, 800px);
   margin-bottom: 28px;
 }
 
 .hero-flank-left {
-  flex: 1 1 320px;
-  max-width: 380px;
+  flex: 1 1 340px;
+  max-width: 420px;
   position: relative;
   z-index: 2;
 }
@@ -341,7 +341,10 @@ h1, h2, h3 {
 .hero-flank-right {
   flex: 0 0 auto;
   display: flex;
+  flex-direction: column;
   gap: 12px;
+  position: relative;
+  z-index: 2;
 }
 
 .section-eyebrow {
@@ -375,10 +378,10 @@ h1, h2, h3 {
 
 .hero-photo {
   position: absolute;
-  left: 50%;
+  left: 63%;
   top: clamp(-90px, -8vw, -40px);
   transform: translateX(-50%);
-  height: clamp(340px, 64vh, 660px);
+  height: clamp(380px, 76vh, 800px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
@@ -1020,6 +1023,7 @@ h1, h2, h3 {
   }
 
   .hero-flank-right {
+    flex-direction: row;
     justify-content: center;
     margin-top: 20px;
   }
