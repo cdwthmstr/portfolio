@@ -288,12 +288,25 @@ h1, h2, h3 {
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   padding-top: 120px;
 }
 
+.hero-name-outer {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+.hero-name-wrap {
+  margin-bottom: 28px;
+}
+
 .hero-inner {
-  max-width: 780px;
+  max-width: 720px;
 }
 
 .section-eyebrow {
@@ -306,12 +319,12 @@ h1, h2, h3 {
 }
 
 .hero-name-big {
-  font-size: clamp(2.6rem, 8vw, 5.6rem);
-  font-weight: 700;
-  line-height: 1.08;
-  letter-spacing: -0.02em;
+  font-family: 'Archivo Black', var(--font-heading);
+  font-size: clamp(2.8rem, 7.8vw, 7rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
-  margin-bottom: 22px;
 }
 
 .hero-photo {
