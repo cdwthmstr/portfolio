@@ -25,15 +25,15 @@
 
 <br />
 
-A single-page portfolio site, dark mode with a glassmorphism look (frosted glass cards, blurred gradient accents), built to double as a living resume for internship and job applications.
+A single-page portfolio site, dark mode with a glassmorphism look (frosted glass cards, blurred gradient accents), built to double as a living CV for internship and job applications.
 
 ## Features
 
-- **Hero** with intro, resume download, and social links
+- **Hero** with intro, CV download, and social links
 - **About** section with education, focus areas, and quick facts
 - **Skills**, grouped by core languages, full-stack tools, databases, and networking fundamentals
 - **Projects**, flagship capstone system with a screenshot gallery, plus three supporting projects
-- **Resume** section with a one-click PDF download
+- **CV** section with a one-click PDF download
 - **Contact** form (mailto handoff) plus direct contact info
 - Mobile nav, scroll-spy active links, and scroll-reveal animations, all vanilla JS
 
@@ -47,7 +47,7 @@ Plain HTML5, CSS3 (custom properties, Flexbox, Grid, `backdrop-filter` for the g
 index.html      main page, all sections
 css/style.css   theme, layout, responsive styles
 js/script.js    nav toggle, scroll spy, form handling
-assets/         images, resume PDF
+assets/         images, CV PDF
 api/            reserved for a future contact-form serverless function
 ```
 
