@@ -325,17 +325,23 @@ h1, h2, h3 {
 
 .hero-flank-left {
   flex: 1 1 260px;
-  max-width: 300px;
+  max-width: 280px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-flank-left .btn-primary {
+  margin-bottom: 28px;
+}
+
+.hero-flank-left .btn-outline {
+  margin-top: 4px;
 }
 
 .hero-flank-right {
   flex: 0 0 auto;
   display: flex;
   gap: 12px;
-}
-
-.hero-inner {
-  max-width: 720px;
 }
 
 .section-eyebrow {
