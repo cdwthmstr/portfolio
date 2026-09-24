@@ -513,6 +513,12 @@ h1, h2, h3 {
   font-size: 0.78rem;
 }
 
+.tech-icons {
+  height: 30px;
+  width: auto;
+  align-self: center;
+}
+
 /* ---------- Selected work ---------- */
 .work-header {
   display: flex;
