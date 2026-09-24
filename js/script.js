@@ -120,26 +120,54 @@ document.querySelectorAll('.filter-group').forEach((group) => {
   const tabs = group.querySelectorAll('.filter-tab');
   const cards = document.querySelectorAll(group.dataset.target);
   const isTimeline = group.dataset.target === '.timeline-row';
+  const limit = group.dataset.limit ? parseInt(group.dataset.limit, 10) : null;
+  const showMoreBtn = document.querySelector(`[data-show-more-for="${group.dataset.target}"]`);
+  let showAll = false;
+
+  function applyFilter(filter) {
+    let totalMatches = 0;
+    cards.forEach((card) => {
+      if (filter === 'all' || card.dataset.category === filter) totalMatches += 1;
+    });
+
+    let seen = 0;
+    cards.forEach((card) => {
+      const matches = filter === 'all' || card.dataset.category === filter;
+      if (matches) seen += 1;
+      const withinLimit = !limit || showAll || seen <= limit;
+      card.classList.toggle('hidden', !(matches && withinLimit));
+    });
+
+    if (showMoreBtn) {
+      showMoreBtn.classList.toggle('hidden', showAll || !limit || totalMatches <= limit);
+    }
+
+    if (isTimeline && timelineBadge) {
+      timelineBadge.textContent = `${totalMatches} ${timelineBadgeLabels[filter]}`;
+    }
+  }
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
       tabs.forEach((t) => t.classList.remove('active'));
       tab.classList.add('active');
-
-      const filter = tab.dataset.filter;
-      let visibleCount = 0;
-
-      cards.forEach((card) => {
-        const matches = filter === 'all' || card.dataset.category === filter;
-        card.classList.toggle('hidden', !matches);
-        if (matches) visibleCount += 1;
-      });
-
-      if (isTimeline && timelineBadge) {
-        timelineBadge.textContent = `${visibleCount} ${timelineBadgeLabels[filter]}`;
-      }
+      showAll = false;
+      applyFilter(tab.dataset.filter);
     });
   });
+
+  if (showMoreBtn) {
+    showMoreBtn.addEventListener('click', () => {
+      showAll = true;
+      const activeTab = group.querySelector('.filter-tab.active');
+      applyFilter(activeTab ? activeTab.dataset.filter : 'all');
+    });
+  }
+
+  if (limit) {
+    const initialTab = group.querySelector('.filter-tab.active');
+    applyFilter(initialTab ? initialTab.dataset.filter : 'all');
+  }
 });
 
 // ---------- Contact form (mailto handoff) ----------
