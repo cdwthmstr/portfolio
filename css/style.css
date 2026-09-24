@@ -220,6 +220,14 @@ h1, h2, h3 {
   transition: background 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease;
 }
 
+.navbar .logo {
+  position: absolute;
+  left: 150px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 101;
+}
+
 .navbar.scrolled {
   background: rgba(10, 10, 10, 0.75);
   backdrop-filter: blur(16px);
@@ -238,7 +246,6 @@ h1, h2, h3 {
 .logo {
   display: flex;
   align-items: center;
-  margin-left: -14px;
 }
 
 .logo img {
@@ -287,6 +294,7 @@ h1, h2, h3 {
   flex-direction: column;
   gap: 5px;
   padding: 6px;
+  margin-left: auto;
 }
 
 .nav-toggle span {
