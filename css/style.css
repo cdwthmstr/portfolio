@@ -643,10 +643,7 @@ h1, h2, h3 {
 }
 
 .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
+  text-align: center;
   color: var(--text-secondary);
   font-size: 0.85rem;
 }
