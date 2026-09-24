@@ -378,7 +378,7 @@ h1, h2, h3 {
 .hero-photo {
   position: absolute;
   left: 63%;
-  top: clamp(-150px, -13vw, -90px);
+  top: clamp(-125px, -11vw, -70px);
   transform: translateX(-50%);
   height: clamp(400px, 84vh, 880px);
   width: auto;
