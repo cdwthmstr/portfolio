@@ -64,4 +64,4 @@ Deployed on [Vercel](https://vercel.com), connected directly to this repo, push 
 | Project | Repo |
 |---|---|
 | Barangay San Roque Family Tree System (capstone) | [preview](https://github.com/cdwthmstr/brgy-san-roque-system-preview) &middot; [code excerpts](https://github.com/cdwthmstr/brgy-san-roque-code-excerpts) |
-| JCM Inventory POS System | [repo](https://github.com/cdwthmstr/ui-jcm-inv-pos-systemv1) |
+| JCM Inventory POS System | [repo](https://github.com/cdwthmstr/jcm-inv-pos-system-ipt102) |
