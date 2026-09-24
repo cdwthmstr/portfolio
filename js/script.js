@@ -139,7 +139,9 @@ document.querySelectorAll('.filter-group').forEach((group) => {
     });
 
     if (showMoreBtn) {
-      showMoreBtn.classList.toggle('hidden', showAll || !limit || totalMatches <= limit);
+      const needsToggle = limit && totalMatches > limit;
+      showMoreBtn.classList.toggle('hidden', !needsToggle);
+      showMoreBtn.textContent = showAll ? 'Show Less' : 'Show More';
     }
 
     if (isTimeline && timelineBadge) {
@@ -158,7 +160,7 @@ document.querySelectorAll('.filter-group').forEach((group) => {
 
   if (showMoreBtn) {
     showMoreBtn.addEventListener('click', () => {
-      showAll = true;
+      showAll = !showAll;
       const activeTab = group.querySelector('.filter-tab.active');
       applyFilter(activeTab ? activeTab.dataset.filter : 'all');
     });
