@@ -316,7 +316,7 @@ h1, h2, h3 {
 .hero-flank {
   position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   min-height: clamp(480px, 88vh, 980px);
