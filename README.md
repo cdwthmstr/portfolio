@@ -69,5 +69,5 @@ Deployed on [Vercel](https://vercel.com), connected directly to this repo, push 
 |---|---|
 | Barangay San Roque Family Tree System (capstone) | [preview](https://github.com/cdwthmstr/brgy-san-roque-system-preview) &middot; [code excerpts](https://github.com/cdwthmstr/brgy-san-roque-code-excerpts) |
 | JCM Inventory POS System | [repo](https://github.com/cdwthmstr/jcm-inv-pos-system-ipt102) |
-| Rentify (rental platform landing page) | [repo](https://github.com/cdwthmstr/rentify-rent-app-cc106) &middot; [live demo](https://retlify-v2-g8.netlify.app/pages/index.html) |
+| Rentify (rental platform) | [repo](https://github.com/cdwthmstr/rentify-rent-app-cc106) &middot; [live demo](https://retlify-v2-g8.netlify.app/pages/index.html) |
 | Personal Webpage (WS101) | [repo](https://github.com/cdwthmstr/personal-webpage-ws101) &middot; [live demo](https://lab1-ws101.netlify.app/) |
