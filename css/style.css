@@ -297,8 +297,8 @@ h1, h2, h3 {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 120px;
+  justify-content: flex-start;
+  padding-top: 130px;
 }
 
 .hero-name-outer {
@@ -319,7 +319,7 @@ h1, h2, h3 {
   align-items: flex-end;
   justify-content: space-between;
   gap: 20px;
-  min-height: clamp(220px, 26vw, 400px);
+  min-height: clamp(320px, 62vh, 720px);
   margin-bottom: 36px;
 }
 
@@ -349,10 +349,10 @@ h1, h2, h3 {
 
 .hero-name-big {
   font-family: 'Archivo Black', var(--font-heading);
-  font-size: clamp(3rem, 11.5vw, 9.5rem);
+  font-size: clamp(3.2rem, 12.5vw, 10.5rem);
   font-weight: 400;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
   text-transform: uppercase;
 }
 
@@ -370,9 +370,9 @@ h1, h2, h3 {
 .hero-photo {
   position: absolute;
   left: 50%;
-  top: clamp(-80px, -7vw, -35px);
+  top: clamp(-90px, -8vw, -40px);
   transform: translateX(-50%);
-  height: clamp(220px, 27vw, 420px);
+  height: clamp(320px, 62vh, 720px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
@@ -1021,6 +1021,8 @@ h1, h2, h3 {
   .hero-photo {
     position: static;
     transform: none;
+    height: auto;
+    width: min(75%, 320px);
     margin: 0 auto 24px;
   }
 
