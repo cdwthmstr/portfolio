@@ -92,6 +92,43 @@ window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
 });
 
+// ---------- Focus areas accordion ----------
+document.querySelectorAll('.accordion-item').forEach((item) => {
+  const header = item.querySelector('.accordion-header');
+  const icon = item.querySelector('.accordion-icon');
+
+  header.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+
+    document.querySelectorAll('.accordion-item.open').forEach((openItem) => {
+      openItem.classList.remove('open');
+      openItem.querySelector('.accordion-icon').textContent = '+';
+    });
+
+    if (!isOpen) {
+      item.classList.add('open');
+      icon.textContent = '×';
+    }
+  });
+});
+
+// ---------- Work filter tabs ----------
+const filterTabs = document.querySelectorAll('.filter-tab');
+const workCards = document.querySelectorAll('.work-card');
+
+filterTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    filterTabs.forEach((t) => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    const filter = tab.dataset.filter;
+    workCards.forEach((card) => {
+      const matches = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !matches);
+    });
+  });
+});
+
 // ---------- Contact form (mailto handoff) ----------
 const contactForm = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');

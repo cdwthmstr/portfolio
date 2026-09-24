@@ -8,7 +8,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230a0a0a%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 text-anchor=%22middle%22 fill=%22%23ff9a00%22 font-family=%22sans-serif%22>M</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -21,18 +21,18 @@
 
   <header class="navbar" id="navbar">
     <div class="container navbar-inner">
+      <span class="status-pill"><span class="status-dot"></span>Available for Internship</span>
+
       <a href="#home" class="logo">MJ<span class="accent">.</span></a>
 
       <nav class="nav-links" id="navLinks">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#resume" class="nav-link">Resume</a>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#focus" class="nav-link">Focus</a>
+        <a href="#path" class="nav-link">Path</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <a href="assets/resume.pdf" class="btn btn-primary btn-small nav-resume-btn" download>Resume</a>
+      <a href="#contact" class="btn btn-primary btn-small nav-cta-btn">Let's Talk</a>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -44,149 +44,110 @@
 
     <section id="home" class="hero">
       <div class="container hero-inner">
-        <p class="eyebrow reveal">Hi, I'm</p>
-        <h1 class="hero-name reveal">Master Guilliver F. Jaravata</h1>
+        <div class="hero-name-wrap reveal">
+          <h1 class="hero-name-big">Master Guilliver<span class="hero-avatar" aria-hidden="true">MJ</span>F. Jaravata</h1>
+        </div>
+
         <h2 class="hero-tagline reveal">BSIT Student <span class="accent">/</span> Aspiring Network &amp; Systems Administrator</h2>
+
         <p class="hero-text reveal">
-          I'm still building up my fundamentals in web development, but the field I actually want to grow
-          into is networking and systems administration, Cisco, Linux, and server-side infrastructure. With
-          the help of AI-assisted development tools, I led my capstone team in shipping a real full-stack
-          system for a barangay, and I'm looking for an internship where I can start building toward that path.
+          I'm still sharpening my fundamentals in HTML, CSS, and JavaScript, but the field I actually want
+          to build a career in is networking and systems administration, Cisco, Linux, and server-side
+          infrastructure. Along the way, I led my capstone team through designing and shipping a real
+          full-stack system, leaning heavily on AI-assisted development tools to get there, which still
+          taught me a lot about defining requirements, testing, and iterating on real feedback.
         </p>
+
         <div class="hero-actions reveal">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#work" class="btn btn-primary">View Projects <span class="arrow">&#8599;</span></a>
           <a href="assets/resume.pdf" class="btn btn-outline" download>Download Resume</a>
         </div>
-        <div class="social-row reveal">
-          <a href="https://github.com/cdwthmstr" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.76.11 3.05.74.8 1.18 1.83 1.18 3.09 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14 0 1.54-.01 2.79-.01 3.17 0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/></svg>
+
+        <div class="hero-social-list reveal">
+          <a href="https://github.com/cdwthmstr" target="_blank" rel="noopener" class="social-row-link">
+            <span>GitHub</span>
+            <span class="arrow">&#8599;</span>
           </a>
-          <a href="https://linkedin.com/in/mrjaravata" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5ZM.5 8h4V23h-4V8Zm7.5 0h3.83v2.05h.05c.53-1 1.84-2.05 3.79-2.05 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.84c0-1.63-.03-3.73-2.27-3.73-2.27 0-2.62 1.77-2.62 3.6V23h-4V8Z"/></svg>
+          <a href="https://linkedin.com/in/mrjaravata" target="_blank" rel="noopener" class="social-row-link">
+            <span>LinkedIn</span>
+            <span class="arrow">&#8599;</span>
           </a>
-          <a href="mailto:mjaravata.work@gmail.com" class="social-icon" aria-label="Email">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3.5 6 8.5 6.5L20.5 6"/></svg>
+          <a href="mailto:mjaravata.work@gmail.com" class="social-row-link">
+            <span>Email</span>
+            <span class="arrow">&#8599;</span>
           </a>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
+    <section id="work" class="section work-section">
+      <span class="watermark-text reveal">WORK</span>
       <div class="container">
-        <p class="section-eyebrow reveal">Get to know me</p>
-        <h2 class="section-title reveal">About Me</h2>
-
-        <div class="about-grid">
-          <div class="glass-card about-card reveal">
-            <p>
-              I'm a BSIT student still sharpening my fundamentals in HTML, CSS, and JavaScript, but the
-              field I actually want to build a career in is networking and systems administration, Cisco,
-              Linux, and server-side infrastructure. Along the way, I led my capstone team through
-              designing and shipping a real full-stack system, leaning heavily on AI-assisted development
-              tools to get there, which still taught me a lot about defining requirements, testing, and
-              iterating on real feedback.
-            </p>
-            <p>
-              I like picking apart how systems and networks actually work under the hood, learning by
-              building, and figuring out the simplest way to solve a messy real-world problem instead of
-              overcomplicating it.
-            </p>
+        <div class="work-header reveal">
+          <div>
+            <p class="section-eyebrow">/Selected Work</p>
+            <h2 class="section-title">Projects</h2>
           </div>
-
-          <div class="glass-card facts-card reveal">
-            <ul class="facts-list">
-              <li>
-                <span class="fact-label">Education</span>
-                <span class="fact-value">BSIT, Dalubhasaang Politekniko ng Lungsod ng Baliwag, expected 2026</span>
-              </li>
-              <li>
-                <span class="fact-label">Location</span>
-                <span class="fact-value">Angat, Bulacan</span>
-              </li>
-              <li>
-                <span class="fact-label">Focus</span>
-                <span class="fact-value">Networking &amp; Systems Administration</span>
-              </li>
-              <li>
-                <span class="fact-label">Certification</span>
-                <span class="fact-value">Basic Web Development Workshop, Zuitt (Nov 2024)</span>
-              </li>
-              <li>
-                <span class="fact-label">Currently</span>
-                <span class="fact-value">Open to internship opportunities</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">What I work with</p>
-        <h2 class="section-title reveal">Skills</h2>
-
-        <div class="skills-group reveal">
-          <h3 class="skills-group-title">Core</h3>
-          <div class="tag-row">
-            <span class="tag">HTML5</span>
-            <span class="tag">CSS3</span>
-            <span class="tag">JavaScript</span>
-          </div>
+          <a href="https://github.com/cdwthmstr" target="_blank" rel="noopener" class="view-all-link">View GitHub Profile <span class="arrow">&#8599;</span></a>
         </div>
 
-        <div class="skills-group reveal">
-          <h3 class="skills-group-title">Full-Stack, via capstone &amp; self-study</h3>
-          <div class="tag-row">
-            <span class="tag tag-outline">React</span>
-            <span class="tag tag-outline">Vite</span>
-            <span class="tag tag-outline">Node.js</span>
-            <span class="tag tag-outline">Express</span>
-            <span class="tag tag-outline">PHP</span>
-            <span class="tag tag-outline">Laravel</span>
-            <span class="tag tag-outline">MUI</span>
-            <span class="tag tag-outline">React Flow</span>
-            <span class="tag tag-outline">TanStack Query</span>
-          </div>
+        <div class="work-filters reveal">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="capstone">Capstone</button>
+          <button class="filter-tab" data-filter="coursework">Coursework</button>
         </div>
 
-        <div class="skills-group reveal">
-          <h3 class="skills-group-title">Databases</h3>
-          <div class="tag-row">
-            <span class="tag tag-outline">PostgreSQL</span>
-            <span class="tag tag-outline">MySQL</span>
-            <span class="tag tag-outline">Sequelize ORM</span>
-          </div>
+        <div class="work-grid reveal" id="workGrid">
+          <a href="#capstone-detail" class="work-card" data-category="capstone">
+            <div class="work-thumb">
+              <img src="assets/images/projects/brgy/dashboard.png" alt="Barangay San Roque Family Tree System dashboard" loading="lazy" />
+            </div>
+            <h3 class="work-title">Barangay San Roque Family Tree System</h3>
+            <p class="work-subtitle">Household profiling, verification &amp; analytics</p>
+            <div class="tag-row">
+              <span class="tag tag-sm">Capstone</span>
+              <span class="tag tag-sm">React &middot; Node &middot; PostgreSQL</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/cdwthmstr/rentify-rent-app-cc106" target="_blank" rel="noopener" class="work-card" data-category="coursework">
+            <div class="work-thumb">
+              <img src="assets/images/projects/thumbs/rentify.png" alt="Rentify landing page" loading="lazy" />
+            </div>
+            <h3 class="work-title">Rentify</h3>
+            <p class="work-subtitle">Peer-to-peer rental platform concept</p>
+            <div class="tag-row">
+              <span class="tag tag-sm">Coursework</span>
+              <span class="tag tag-sm">HTML &middot; CSS &middot; JS</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/cdwthmstr/jcm-inv-pos-system-ipt102" target="_blank" rel="noopener" class="work-card" data-category="coursework">
+            <div class="work-thumb">
+              <img src="assets/images/projects/thumbs/pos.png" alt="JCM Inventory POS System dashboard" loading="lazy" />
+            </div>
+            <h3 class="work-title">JCM Inventory POS System</h3>
+            <p class="work-subtitle">Point-of-sale &amp; inventory dashboard</p>
+            <div class="tag-row">
+              <span class="tag tag-sm">Coursework</span>
+              <span class="tag tag-sm">HTML &middot; CSS &middot; JS</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/cdwthmstr/personal-webpage-ws101" target="_blank" rel="noopener" class="work-card" data-category="coursework">
+            <div class="work-thumb">
+              <img src="assets/images/projects/thumbs/ws101.png" alt="Personal webpage from WS101" loading="lazy" />
+            </div>
+            <h3 class="work-title">Personal Webpage</h3>
+            <p class="work-subtitle">Early profile page, networking-focused</p>
+            <div class="tag-row">
+              <span class="tag tag-sm">Coursework</span>
+              <span class="tag tag-sm">HTML &middot; CSS</span>
+            </div>
+          </a>
         </div>
 
-        <div class="skills-group reveal">
-          <h3 class="skills-group-title">Tools &amp; Environment</h3>
-          <div class="tag-row">
-            <span class="tag tag-outline">Git &amp; GitHub</span>
-            <span class="tag tag-outline">VS Code</span>
-            <span class="tag tag-outline">Cursor</span>
-            <span class="tag tag-outline">Linux/Ubuntu</span>
-            <span class="tag tag-outline">Windows</span>
-          </div>
-        </div>
-
-        <div class="skills-group reveal">
-          <h3 class="skills-group-title">Networking Fundamentals</h3>
-          <div class="tag-row">
-            <span class="tag tag-outline">Cisco Packet Tracer</span>
-            <span class="tag tag-outline">Basic Networking</span>
-            <span class="tag tag-outline">Hardware Troubleshooting</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="container">
-        <p class="section-eyebrow reveal">Selected work</p>
-        <h2 class="section-title reveal">Projects</h2>
-
-        <article class="glass-card project-card project-card-flagship reveal">
+        <article class="glass-card project-card-flagship reveal" id="capstone-detail">
           <div class="project-header">
             <div>
               <h3 class="project-title">Barangay San Roque Family Tree System</h3>
@@ -264,103 +225,141 @@
             <a href="https://github.com/cdwthmstr/brgy-san-roque-code-excerpts" target="_blank" rel="noopener" class="btn btn-outline btn-small">Code Excerpts</a>
           </div>
         </article>
-
-        <article class="glass-card project-card reveal">
-          <div class="project-header">
-            <div>
-              <h3 class="project-title">JCM Inventory POS System</h3>
-              <p class="project-subtitle">School Project &middot; IPT102</p>
-            </div>
-          </div>
-
-          <p class="project-desc">
-            A simple inventory and point-of-sale system interface, built with plain HTML, CSS, and
-            JavaScript to practice the fundamentals, no framework, no shortcuts.
-          </p>
-
-          <div class="tag-row">
-            <span class="tag tag-sm">HTML5</span>
-            <span class="tag tag-sm">CSS3</span>
-            <span class="tag tag-sm">JavaScript</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://github.com/cdwthmstr/jcm-inv-pos-system-ipt102" target="_blank" rel="noopener" class="btn btn-outline btn-small">View on GitHub</a>
-          </div>
-        </article>
-
-        <article class="glass-card project-card reveal">
-          <div class="project-header">
-            <div>
-              <h3 class="project-title">Rentify</h3>
-              <p class="project-subtitle">Frontend Project &middot; CC106</p>
-            </div>
-          </div>
-
-          <p class="project-desc">
-            A peer-to-peer rental platform concept, connecting people who need to rent an item with people
-            willing to lend theirs. Landing, about, and sign-in pages, an animated gradient hero, a
-            trusted-by marquee, and a 4-step how-it-works accordion, built with plain HTML, CSS, and
-            JavaScript.
-          </p>
-
-          <div class="tag-row">
-            <span class="tag tag-sm">HTML5</span>
-            <span class="tag tag-sm">CSS3</span>
-            <span class="tag tag-sm">JavaScript</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://github.com/cdwthmstr/rentify-rent-app-cc106" target="_blank" rel="noopener" class="btn btn-outline btn-small">View on GitHub</a>
-            <a href="https://retlify-v2-g8.netlify.app/pages/index.html" target="_blank" rel="noopener" class="btn btn-outline btn-small">Live Demo</a>
-          </div>
-        </article>
-
-        <article class="glass-card project-card reveal">
-          <div class="project-header">
-            <div>
-              <h3 class="project-title">Personal Webpage</h3>
-              <p class="project-subtitle">School Project &middot; WS101</p>
-            </div>
-          </div>
-
-          <p class="project-desc">
-            An earlier personal profile page built around a networking and systems engineering focus,
-            education, a skills matrix, and featured mini-projects, all on a single dark, glassmorphism-style
-            HTML and CSS page.
-          </p>
-
-          <div class="tag-row">
-            <span class="tag tag-sm">HTML5</span>
-            <span class="tag tag-sm">CSS3</span>
-          </div>
-
-          <div class="project-links">
-            <a href="https://github.com/cdwthmstr/personal-webpage-ws101" target="_blank" rel="noopener" class="btn btn-outline btn-small">View on GitHub</a>
-            <a href="https://lab1-ws101.netlify.app/" target="_blank" rel="noopener" class="btn btn-outline btn-small">Live Demo</a>
-          </div>
-        </article>
       </div>
     </section>
 
-    <section id="resume" class="section">
+    <section id="focus" class="section focus-section">
+      <span class="watermark-text reveal">FOCUS</span>
       <div class="container">
-        <div class="glass-card resume-card reveal">
-          <p class="section-eyebrow">Full details</p>
-          <h2 class="section-title">Resume</h2>
-          <p class="resume-text">Want the full rundown of my education, skills, and experience? Grab a copy below.</p>
-          <a href="assets/resume.pdf" class="btn btn-primary" download>Download Resume (PDF)</a>
+        <p class="section-eyebrow reveal">/Focus Areas</p>
+        <h2 class="section-title reveal">Where I'm Headed</h2>
+
+        <div class="accordion reveal" id="accordion">
+          <div class="accordion-item open">
+            <button class="accordion-header">
+              <span class="accordion-title">Networking &amp; Systems Administration</span>
+              <span class="accordion-icon">&times;</span>
+            </button>
+            <div class="accordion-body">
+              <p>The field I'm actually building toward. Cisco Packet Tracer, TCP/IP fundamentals, Linux
+              and Windows server administration, and hardware troubleshooting.</p>
+              <div class="tag-row">
+                <span class="tag tag-sm">Cisco Packet Tracer</span>
+                <span class="tag tag-sm">Linux/Ubuntu</span>
+                <span class="tag tag-sm">Windows</span>
+                <span class="tag tag-sm">Hardware Troubleshooting</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">Full-Stack Development</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Gained hands-on through leading my capstone team, with AI-assisted development tools
+              filling the gaps in my experience.</p>
+              <div class="tag-row">
+                <span class="tag tag-sm">React</span>
+                <span class="tag tag-sm">Node.js</span>
+                <span class="tag tag-sm">Express</span>
+                <span class="tag tag-sm">PHP</span>
+                <span class="tag tag-sm">Laravel</span>
+                <span class="tag tag-sm">PostgreSQL</span>
+                <span class="tag tag-sm">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">Web Fundamentals</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>The core building blocks I'm still sharpening every day.</p>
+              <div class="tag-row">
+                <span class="tag tag-sm">HTML5</span>
+                <span class="tag tag-sm">CSS3</span>
+                <span class="tag tag-sm">JavaScript</span>
+                <span class="tag tag-sm">Git &amp; GitHub</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span class="accordion-title">Tools &amp; Workflow</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>What I actually build and learn with day to day.</p>
+              <div class="tag-row">
+                <span class="tag tag-sm">VS Code</span>
+                <span class="tag tag-sm">Cursor</span>
+                <span class="tag tag-sm">Git</span>
+                <span class="tag tag-sm">GitHub</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="path" class="section path-section">
+      <span class="watermark-text reveal">PATH</span>
       <div class="container">
-        <p class="section-eyebrow reveal">Let's talk</p>
-        <h2 class="section-title reveal">Contact</h2>
+        <p class="section-eyebrow reveal">/Education &amp; Certifications</p>
+        <h2 class="section-title reveal">The Path So Far</h2>
 
-        <div class="contact-grid">
-          <form class="glass-card contact-form reveal" id="contactForm">
+        <div class="timeline-card reveal">
+          <div class="timeline-card-header">
+            <span>Currently pursuing BSIT</span>
+            <span class="timeline-badge">Expected 2026</span>
+          </div>
+
+          <div class="timeline-row">
+            <div>
+              <h3>BS Information Technology</h3>
+              <p class="timeline-sub">Dalubhasaang Politekniko ng Lungsod ng Baliwag, Institute of Information Technology and Innovation</p>
+            </div>
+            <span class="timeline-date">Expected 2026</span>
+          </div>
+
+          <div class="timeline-row">
+            <div>
+              <h3>Basic Web Development Workshop</h3>
+              <p class="timeline-sub">Zuitt</p>
+            </div>
+            <span class="timeline-date">Nov 2024</span>
+          </div>
+
+          <div class="timeline-row">
+            <div>
+              <h3>Secondary Education</h3>
+              <p class="timeline-sub">Pres. Diosdado P. Macapagal Memorial High School</p>
+            </div>
+            <span class="timeline-date">&mdash;</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section cta-section">
+      <div class="container">
+        <span class="status-pill reveal"><span class="status-dot"></span>Available for Internship</span>
+        <h2 class="cta-heading reveal">Ready For An Internship?</h2>
+        <p class="cta-text reveal">
+          I'm looking for an internship where I can start building toward a career in networking and
+          systems administration. Grab my resume, or send me a message below.
+        </p>
+        <div class="hero-actions reveal cta-actions">
+          <a href="assets/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+        </div>
+
+        <div class="contact-grid reveal">
+          <form class="glass-card contact-form" id="contactForm">
             <div class="form-field">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -377,7 +376,7 @@
             <p class="form-note" id="formNote"></p>
           </form>
 
-          <div class="glass-card contact-direct reveal">
+          <div class="glass-card contact-direct">
             <h3>Direct Contact</h3>
             <a href="mailto:mjaravata.work@gmail.com" class="contact-link">mjaravata.work@gmail.com</a>
             <a href="tel:+639308878085" class="contact-link">0930-887-8085</a>
@@ -392,6 +391,15 @@
 
   <footer class="footer">
     <div class="container footer-inner">
+      <div class="footer-identity">
+        <span class="footer-avatar">MJ</span>
+        <span>Master Guilliver F. Jaravata</span>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/cdwthmstr" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mrjaravata" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:mjaravata.work@gmail.com">Email</a>
+      </div>
       <p>&copy; <span id="year"></span> Master Guilliver F. Jaravata</p>
     </div>
   </footer>
