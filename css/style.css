@@ -319,13 +319,13 @@ h1, h2, h3 {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  min-height: clamp(340px, 56vh, 560px);
+  min-height: clamp(380px, 64vh, 660px);
   margin-bottom: 28px;
 }
 
 .hero-flank-left {
-  flex: 1 1 340px;
-  max-width: 400px;
+  flex: 1 1 320px;
+  max-width: 380px;
   position: relative;
   z-index: 2;
 }
@@ -378,7 +378,7 @@ h1, h2, h3 {
   left: 50%;
   top: clamp(-90px, -8vw, -40px);
   transform: translateX(-50%);
-  height: clamp(300px, 56vh, 560px);
+  height: clamp(340px, 64vh, 660px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.55));
