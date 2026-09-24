@@ -303,9 +303,9 @@ h1, h2, h3 {
 
 .hero-name-outer {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   box-sizing: border-box;
 }
 
@@ -349,7 +349,7 @@ h1, h2, h3 {
 
 .hero-name-big {
   font-family: 'Archivo Black', var(--font-heading);
-  font-size: clamp(3rem, 10.5vw, 8.5rem);
+  font-size: clamp(3rem, 11.5vw, 9.5rem);
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.01em;
