@@ -113,9 +113,13 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
 });
 
 // ---------- Filter tabs (Work, Path, etc.) ----------
+const timelineBadge = document.getElementById('timelineBadge');
+const timelineBadgeLabels = { all: 'Milestones', education: 'in Education', certification: 'Certifications' };
+
 document.querySelectorAll('.filter-group').forEach((group) => {
   const tabs = group.querySelectorAll('.filter-tab');
   const cards = document.querySelectorAll(group.dataset.target);
+  const isTimeline = group.dataset.target === '.timeline-row';
 
   tabs.forEach((tab) => {
     tab.addEventListener('click', () => {
@@ -123,10 +127,17 @@ document.querySelectorAll('.filter-group').forEach((group) => {
       tab.classList.add('active');
 
       const filter = tab.dataset.filter;
+      let visibleCount = 0;
+
       cards.forEach((card) => {
         const matches = filter === 'all' || card.dataset.category === filter;
         card.classList.toggle('hidden', !matches);
+        if (matches) visibleCount += 1;
       });
+
+      if (isTimeline && timelineBadge) {
+        timelineBadge.textContent = `${visibleCount} ${timelineBadgeLabels[filter]}`;
+      }
     });
   });
 });
