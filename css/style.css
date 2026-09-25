@@ -673,12 +673,17 @@ h1, h2, h3 {
   align-items: center;
   gap: 6px;
   vertical-align: middle;
+  margin-left: 6px;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 999px;
+  padding: 3px 12px 3px 3px;
 }
 
 .team-avatar {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
+  border-radius: 7px;
   object-fit: cover;
   object-position: 50% 20%;
   background: #fff;
