@@ -513,18 +513,26 @@ h1, h2, h3 {
   font-size: 0.78rem;
 }
 
-.tag-accent {
-  background: rgba(255, 154, 0, 0.12);
-  border-color: rgba(255, 154, 0, 0.35);
-  color: var(--accent-1);
-  padding: 8px 14px;
-  line-height: 1;
-}
-
 .tech-icons {
   height: 30px;
   width: auto;
   align-self: center;
+}
+
+.tech-chip {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: #242938;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+.tech-chip img {
+  width: 18px;
+  height: 18px;
 }
 
 /* ---------- Selected work ---------- */
