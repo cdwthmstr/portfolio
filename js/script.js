@@ -110,6 +110,29 @@ window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
 });
 
+// ---------- Team modal ----------
+const teamModal = document.getElementById('teamModal');
+const teamCreditBtn = document.getElementById('teamCreditBtn');
+const teamModalClose = document.getElementById('teamModalClose');
+
+if (teamModal && teamCreditBtn) {
+  teamCreditBtn.addEventListener('click', () => {
+    teamModal.classList.add('open');
+  });
+
+  function closeTeamModal() {
+    teamModal.classList.remove('open');
+  }
+
+  teamModalClose.addEventListener('click', closeTeamModal);
+  teamModal.addEventListener('click', (e) => {
+    if (e.target === teamModal) closeTeamModal();
+  });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeTeamModal();
+  });
+}
+
 // ---------- Focus areas accordion ----------
 document.querySelectorAll('.accordion-item').forEach((item) => {
   const header = item.querySelector('.accordion-header');

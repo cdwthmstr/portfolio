@@ -1084,6 +1084,81 @@ h1, h2, h3 {
   color: var(--text-primary);
 }
 
+/* ---------- Team modal ---------- */
+.team-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  padding: 40px 20px;
+}
+
+.team-modal.open {
+  display: flex;
+}
+
+.team-modal-inner {
+  position: relative;
+  background: var(--bg-elevated);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  max-width: 820px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.team-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.team-modal-title {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.team-modal-sub {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.team-modal-section {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent-1);
+  margin-bottom: 12px;
+}
+
+.team-modal-section:not(:first-of-type) {
+  margin-top: 28px;
+}
+
+.team-member-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.team-member-thumb {
+  aspect-ratio: 1;
+}
+
+.team-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
 /* ---------- Scroll reveal ---------- */
 .reveal {
   opacity: 0;
@@ -1142,6 +1217,14 @@ h1, h2, h3 {
   }
 
   .screenshot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-member-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-photo-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
