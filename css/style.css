@@ -189,7 +189,6 @@ h1, h2, h3 {
 
 /* ---------- Status pill ---------- */
 .status-pill {
-  font-family: var(--font-mono);
   display: inline-flex;
   align-items: center;
   gap: 9px;
