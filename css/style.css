@@ -519,6 +519,10 @@ h1, h2, h3 {
   align-self: center;
 }
 
+.tech-icon-row {
+  gap: 5px;
+}
+
 .tech-chip {
   width: 30px;
   height: 30px;
