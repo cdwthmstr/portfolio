@@ -636,6 +636,7 @@ h1, h2, h3 {
 }
 
 .work-title {
+  font-family: var(--font-mono);
   font-size: 1.1rem;
   margin: 18px 20px 4px;
 }
