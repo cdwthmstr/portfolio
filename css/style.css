@@ -517,6 +517,8 @@ h1, h2, h3 {
   background: rgba(255, 154, 0, 0.12);
   border-color: rgba(255, 154, 0, 0.35);
   color: var(--accent-1);
+  padding: 8px 14px;
+  line-height: 1;
 }
 
 .tech-icons {
