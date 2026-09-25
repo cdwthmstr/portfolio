@@ -69,19 +69,37 @@ document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el))
 // ---------- Screenshot lightbox ----------
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
+const lightboxVideo = document.getElementById('lightboxVideo');
 const lightboxClose = document.getElementById('lightboxClose');
 
 document.querySelectorAll('.screenshot-thumb').forEach((thumb) => {
   thumb.addEventListener('click', () => {
+    lightboxVideo.pause();
+    lightboxVideo.style.display = 'none';
+    lightboxImg.style.display = '';
     lightboxImg.src = thumb.dataset.full;
     lightboxImg.alt = thumb.querySelector('img').alt;
     lightbox.classList.add('open');
   });
 });
 
+document.querySelectorAll('.video-trigger').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    lightboxImg.style.display = 'none';
+    lightboxImg.src = '';
+    lightboxVideo.style.display = 'block';
+    lightboxVideo.src = trigger.dataset.video;
+    lightbox.classList.add('open');
+    lightboxVideo.play();
+  });
+});
+
 function closeLightbox() {
   lightbox.classList.remove('open');
   lightboxImg.src = '';
+  lightboxVideo.pause();
+  lightboxVideo.removeAttribute('src');
+  lightboxVideo.load();
 }
 
 lightboxClose.addEventListener('click', closeLightbox);
