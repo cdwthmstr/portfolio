@@ -57,6 +57,7 @@ ul {
 
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 body {
@@ -188,6 +189,7 @@ h1, h2, h3 {
 
 /* ---------- Status pill ---------- */
 .status-pill {
+  font-family: var(--font-mono);
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -360,6 +362,7 @@ h1, h2, h3 {
 }
 
 .section-eyebrow {
+  font-family: var(--font-mono);
   color: var(--accent-1);
   font-weight: 600;
   font-size: 0.85rem;
@@ -494,6 +497,7 @@ h1, h2, h3 {
 }
 
 .tag {
+  font-family: var(--font-mono);
   padding: 9px 18px;
   border-radius: 999px;
   background: var(--glass-bg);
@@ -566,6 +570,7 @@ h1, h2, h3 {
 }
 
 .filter-tab {
+  font-family: var(--font-mono);
   padding: 8px 18px;
   border-radius: 999px;
   font-size: 0.85rem;
@@ -683,6 +688,7 @@ h1, h2, h3 {
 }
 
 .project-badge {
+  font-family: var(--font-mono);
   flex-shrink: 0;
   padding: 6px 14px;
   border-radius: 999px;
@@ -868,6 +874,7 @@ h1, h2, h3 {
 }
 
 .timeline-badge {
+  font-family: var(--font-mono);
   flex-shrink: 0;
   padding: 5px 14px;
   border-radius: 999px;
@@ -907,6 +914,7 @@ h1, h2, h3 {
 }
 
 .timeline-date {
+  font-family: var(--font-mono);
   color: var(--text-secondary);
   font-size: 0.85rem;
   white-space: nowrap;
