@@ -1106,7 +1106,7 @@ h1, h2, h3 {
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: 32px;
-  max-width: 820px;
+  max-width: 1040px;
   width: 100%;
   max-height: 85vh;
   overflow-y: auto;
@@ -1145,7 +1145,7 @@ h1, h2, h3 {
 
 .team-member-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 10px;
 }
 
