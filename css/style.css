@@ -889,10 +889,11 @@ h1, h2, h3 {
 }
 
 .cta-heading {
-  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-size: clamp(1.6rem, 4.4vw, 3.4rem);
   font-weight: 700;
   text-transform: uppercase;
-  max-width: 720px;
+  white-space: nowrap;
+  max-width: 100%;
   margin: 0 auto 20px;
 }
 
@@ -1175,6 +1176,11 @@ h1, h2, h3 {
 }
 
 @media (max-width: 500px) {
+  .cta-heading {
+    white-space: normal;
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
   .screenshot-grid {
     grid-template-columns: repeat(2, 1fr);
   }
