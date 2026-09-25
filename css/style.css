@@ -665,6 +665,7 @@ h1, h2, h3 {
 }
 
 .project-title {
+  font-family: var(--font-mono);
   font-size: 1.3rem;
   margin-bottom: 4px;
 }
