@@ -1146,16 +1146,19 @@ h1, h2, h3 {
 }
 
 .team-member-thumb span {
-  padding: 8px;
+  padding: 10px 8px 8px;
   font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.88) 45%, transparent);
 }
 
 .team-member-thumb span small {
   display: block;
   font-size: 0.62rem;
-  color: var(--text-secondary);
+  color: #d8d2cc;
   font-weight: 400;
   margin-top: 2px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 
 .team-photo-grid {
