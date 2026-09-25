@@ -1123,6 +1123,7 @@ h1, h2, h3 {
 }
 
 .team-modal-title {
+  font-family: var(--font-mono);
   font-size: 1.3rem;
   margin-bottom: 4px;
 }
@@ -1134,6 +1135,7 @@ h1, h2, h3 {
 }
 
 .team-modal-section {
+  font-family: var(--font-mono);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -1156,6 +1158,7 @@ h1, h2, h3 {
 }
 
 .team-member-thumb span {
+  font-family: var(--font-mono);
   padding: 10px 8px 8px;
   font-weight: 600;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
