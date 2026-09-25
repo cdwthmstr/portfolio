@@ -513,6 +513,12 @@ h1, h2, h3 {
   font-size: 0.78rem;
 }
 
+.tag-accent {
+  background: rgba(255, 154, 0, 0.12);
+  border-color: rgba(255, 154, 0, 0.35);
+  color: var(--accent-1);
+}
+
 .tech-icons {
   height: 30px;
   width: auto;
@@ -652,8 +658,11 @@ h1, h2, h3 {
   flex-shrink: 0;
   padding: 6px 14px;
   border-radius: 999px;
-  background: var(--accent-gradient);
-  color: #ffffff;
+  background-image: linear-gradient(var(--bg-elevated), var(--bg-elevated)), var(--accent-gradient);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+  color: var(--accent-1);
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
