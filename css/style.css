@@ -1291,6 +1291,11 @@ h1, h2, h3 {
     display: none;
   }
 
+  .navbar .logo {
+    position: static;
+    transform: none;
+  }
+
   .nav-links {
     position: fixed;
     top: 64px;
