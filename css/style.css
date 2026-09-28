@@ -1212,6 +1212,10 @@ h1, h2, h3 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
+  .hero-name-outer {
+    text-align: center;
+  }
+
   .hero-tagline {
     white-space: normal;
   }
