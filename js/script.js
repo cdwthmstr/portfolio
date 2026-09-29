@@ -137,6 +137,11 @@ if (teamModal && teamCreditBtn) {
 document.querySelectorAll('.accordion-item').forEach((item) => {
   const header = item.querySelector('.accordion-header');
   const icon = item.querySelector('.accordion-icon');
+  const body = item.querySelector('.accordion-body');
+
+  if (item.classList.contains('open')) {
+    body.style.maxHeight = `${body.scrollHeight}px`;
+  }
 
   header.addEventListener('click', () => {
     const isOpen = item.classList.contains('open');
@@ -144,13 +149,20 @@ document.querySelectorAll('.accordion-item').forEach((item) => {
     document.querySelectorAll('.accordion-item.open').forEach((openItem) => {
       openItem.classList.remove('open');
       openItem.querySelector('.accordion-icon').textContent = '+';
+      openItem.querySelector('.accordion-body').style.maxHeight = '';
     });
 
     if (!isOpen) {
       item.classList.add('open');
       icon.textContent = '×';
+      body.style.maxHeight = `${body.scrollHeight}px`;
     }
   });
+});
+
+window.addEventListener('resize', () => {
+  const openBody = document.querySelector('.accordion-item.open .accordion-body');
+  if (openBody) openBody.style.maxHeight = `${openBody.scrollHeight}px`;
 });
 
 // ---------- Filter tabs (Work, Path, etc.) ----------
