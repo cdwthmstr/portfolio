@@ -1350,7 +1350,7 @@ h1, h2, h3 {
   }
 
   .team-member-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .team-photo-grid {
