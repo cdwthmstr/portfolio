@@ -774,6 +774,13 @@ h1, h2, h3 {
   text-align: left;
 }
 
+.team-highlight-thumb span {
+  padding: 10px 8px 8px;
+  font-weight: 600;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.55) 55%, transparent);
+}
+
 .screenshot-thumb:hover img {
   transform: scale(1.06);
 }
