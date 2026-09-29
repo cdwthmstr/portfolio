@@ -1222,6 +1222,15 @@ h1, h2, h3 {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
 }
 
+.role-blank-line {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #d8d2cc;
+  opacity: 0.85;
+}
+
 .team-photo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
