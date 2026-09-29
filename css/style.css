@@ -1196,6 +1196,16 @@ h1, h2, h3 {
   filter: grayscale(0%);
 }
 
+.member-redacted {
+  display: inline-block;
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
+
+.member-inactive:hover .member-redacted {
+  filter: blur(0);
+}
+
 .team-member-thumb span {
   padding: 10px 8px 8px;
   font-weight: 600;
