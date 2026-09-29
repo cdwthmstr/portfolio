@@ -1265,7 +1265,8 @@ h1, h2, h3 {
   }
 
   .hero-mobile-name .hero-name-outline {
-    -webkit-text-stroke-width: 1.2px;
+    color: var(--text-primary);
+    -webkit-text-stroke-width: 0;
   }
 
   .hero-mobile-actions {
