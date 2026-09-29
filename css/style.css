@@ -1187,6 +1187,15 @@ h1, h2, h3 {
   aspect-ratio: 1;
 }
 
+.member-inactive img {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.member-inactive:hover img {
+  filter: grayscale(0%);
+}
+
 .team-member-thumb span {
   padding: 10px 8px 8px;
   font-weight: 600;
