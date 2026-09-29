@@ -1188,12 +1188,12 @@ h1, h2, h3 {
 }
 
 .member-inactive img {
-  filter: grayscale(100%);
+  filter: grayscale(100%) blur(2px);
   transition: filter 0.3s ease;
 }
 
 .member-inactive:hover img {
-  filter: grayscale(0%);
+  filter: grayscale(0%) blur(0);
 }
 
 .member-redacted {
