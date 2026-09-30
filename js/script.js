@@ -225,22 +225,38 @@ document.querySelectorAll('.filter-group').forEach((group) => {
   }
 });
 
-// ---------- Contact form (mailto handoff) ----------
+// ---------- Contact form (Formspree) ----------
 const contactForm = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
+const contactSubmitBtn = contactForm.querySelector('button[type="submit"]');
 
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const message = document.getElementById('message').value.trim();
+  const originalBtnText = contactSubmitBtn.textContent;
 
-  const subject = encodeURIComponent(`Portfolio contact from ${name}`);
-  const body = encodeURIComponent(`${message}\n\nFrom: ${name} (${email})`);
+  contactSubmitBtn.disabled = true;
+  contactSubmitBtn.textContent = 'Sending...';
+  formNote.textContent = '';
 
-  window.location.href = `mailto:mjaravata.work@gmail.com?subject=${subject}&body=${body}`;
-  formNote.textContent = "Opening your email app... if nothing happens, email me directly at mjaravata.work@gmail.com";
+  try {
+    const response = await fetch(contactForm.action, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(contactForm),
+    });
+
+    if (!response.ok) throw new Error('Form submission failed');
+
+    formNote.textContent = `Thanks, ${name}! Your message is on its way, I'll get back to you soon.`;
+    contactForm.reset();
+  } catch (err) {
+    formNote.textContent = 'Something went wrong. Please email me directly at mjaravata.work@gmail.com';
+  } finally {
+    contactSubmitBtn.disabled = false;
+    contactSubmitBtn.textContent = originalBtnText;
+  }
 });
 
 // ---------- Footer year ----------

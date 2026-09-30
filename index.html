@@ -432,7 +432,7 @@
         </div>
 
         <div class="contact-grid reveal">
-          <form class="glass-card contact-form" id="contactForm">
+          <form class="glass-card contact-form" id="contactForm" action="https://formspree.io/f/xqpanwze" method="POST">
             <div class="form-field">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -445,6 +445,8 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5" required></textarea>
             </div>
+            <input type="hidden" name="_subject" value="New message from portfolio contact form" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
             <button type="submit" class="btn btn-primary">Send Message</button>
             <p class="form-note" id="formNote"></p>
           </form>
