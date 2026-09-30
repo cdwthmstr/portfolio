@@ -1220,14 +1220,13 @@ h1, h2, h3 {
 
 .team-member-thumb .role-blank-line {
   position: static;
-  display: block;
-  width: 72%;
-  height: 6px;
-  margin-top: 4px;
+  display: inline-block;
+  width: 18px;
+  height: 2px;
   padding: 0;
-  border-radius: 3px;
+  border-radius: 2px;
   background: #d8d2cc;
-  opacity: 0.55;
+  opacity: 0.85;
 }
 
 .team-photo-grid {
