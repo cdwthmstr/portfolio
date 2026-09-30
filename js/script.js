@@ -259,5 +259,141 @@ contactForm.addEventListener('submit', async (e) => {
   }
 });
 
+// ---------- Hero particle animation ----------
+(function () {
+  const canvas = document.getElementById('heroParticles');
+  const heroSection = document.getElementById('home');
+  if (!canvas || !heroSection) return;
+
+  const isMobile = window.matchMedia('(max-width: 860px)').matches;
+  if (isMobile) return;
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const ctx = canvas.getContext('2d');
+  const colors = ['#ff9a00', '#ff3b30', '#ffb84d', '#ff6b57', '#ffd08a'];
+  const particleCount = 70;
+  const repelRadius = 130;
+
+  let particles = [];
+  let width = 0;
+  let height = 0;
+  let mouseX = -9999;
+  let mouseY = -9999;
+  let rafId = null;
+  let isVisible = true;
+
+  function resize() {
+    const rect = heroSection.getBoundingClientRect();
+    width = rect.width;
+    height = rect.height;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = `${width}px`;
+    canvas.style.height = `${height}px`;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function createParticles() {
+    particles = Array.from({ length: particleCount }, () => {
+      const baseX = Math.random() * width;
+      const baseY = Math.random() * height;
+      return {
+        baseX,
+        baseY,
+        x: baseX,
+        y: baseY,
+        radius: 1 + Math.random() * 2.2,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        driftAngle: Math.random() * Math.PI * 2,
+        driftSpeed: 0.15 + Math.random() * 0.25,
+        driftRadius: 10 + Math.random() * 20,
+      };
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+    particles.forEach((p) => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = 0.7;
+      ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+  }
+
+  function step() {
+    particles.forEach((p) => {
+      p.driftAngle += 0.0032 * p.driftSpeed;
+      const idleX = p.baseX + Math.cos(p.driftAngle) * p.driftRadius;
+      const idleY = p.baseY + Math.sin(p.driftAngle) * p.driftRadius;
+
+      const dx = idleX - mouseX;
+      const dy = idleY - mouseY;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      let targetX = idleX;
+      let targetY = idleY;
+
+      if (dist < repelRadius) {
+        const force = (repelRadius - dist) / repelRadius;
+        const angle = Math.atan2(dy, dx);
+        targetX = idleX + Math.cos(angle) * force * 60;
+        targetY = idleY + Math.sin(angle) * force * 60;
+      }
+
+      p.x += (targetX - p.x) * 0.12;
+      p.y += (targetY - p.y) * 0.12;
+    });
+
+    draw();
+
+    rafId = isVisible ? requestAnimationFrame(step) : null;
+  }
+
+  function handleMouseMove(e) {
+    const rect = heroSection.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+  }
+
+  function handleMouseLeave() {
+    mouseX = -9999;
+    mouseY = -9999;
+  }
+
+  resize();
+  createParticles();
+
+  if (prefersReducedMotion) {
+    draw();
+  } else {
+    rafId = requestAnimationFrame(step);
+    heroSection.addEventListener('mousemove', handleMouseMove);
+    heroSection.addEventListener('mouseleave', handleMouseLeave);
+
+    const heroObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isVisible = entry.isIntersecting;
+          if (isVisible && rafId === null) {
+            rafId = requestAnimationFrame(step);
+          }
+        });
+      },
+      { threshold: 0 }
+    );
+    heroObserver.observe(heroSection);
+  }
+
+  window.addEventListener('resize', () => {
+    resize();
+    createParticles();
+    if (prefersReducedMotion) draw();
+  });
+})();
+
 // ---------- Footer year ----------
 document.getElementById('year').textContent = new Date().getFullYear();
