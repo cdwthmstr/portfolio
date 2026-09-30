@@ -1196,7 +1196,8 @@ h1, h2, h3 {
   filter: grayscale(0%) blur(0);
 }
 
-.member-redacted {
+.team-member-thumb .member-redacted {
+  position: static;
   display: inline-block;
   filter: blur(4px);
   transition: filter 0.3s ease;
@@ -1227,6 +1228,7 @@ h1, h2, h3 {
   border-radius: 2px;
   background: #d8d2cc;
   opacity: 0.85;
+  filter: blur(1.2px);
 }
 
 .team-photo-grid {
