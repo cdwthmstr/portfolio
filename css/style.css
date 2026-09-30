@@ -1224,13 +1224,14 @@ h1, h2, h3 {
 
 .team-member-thumb .role-blank-line {
   position: static;
-  display: inline-block;
-  width: 18px;
-  height: 2px;
+  display: block;
+  width: 72%;
+  height: 6px;
+  margin-top: 4px;
   padding: 0;
-  border-radius: 2px;
+  border-radius: 3px;
   background: #d8d2cc;
-  opacity: 0.85;
+  opacity: 0.55;
 }
 
 .team-photo-grid {
