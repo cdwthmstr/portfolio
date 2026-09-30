@@ -112,6 +112,19 @@ h1, h2, h3 {
   opacity: 0.35;
 }
 
+.hero-particles {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (max-width: 860px) {
+  .hero-particles {
+    display: none;
+  }
+}
+
 .blob-1 {
   width: 480px;
   height: 480px;
@@ -314,13 +327,6 @@ h1, h2, h3 {
   flex-direction: column;
   justify-content: flex-start;
   padding-top: 130px;
-}
-
-.hero-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
 }
 
 .hero-mobile {
@@ -1261,10 +1267,6 @@ h1, h2, h3 {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .hero-particles {
-    display: none;
-  }
-
   .hero-name-outer {
     display: none;
   }

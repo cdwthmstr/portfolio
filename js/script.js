@@ -259,11 +259,10 @@ contactForm.addEventListener('submit', async (e) => {
   }
 });
 
-// ---------- Hero particle animation ----------
+// ---------- Site-wide particle animation ----------
 (function () {
   const canvas = document.getElementById('heroParticles');
-  const heroSection = document.getElementById('home');
-  if (!canvas || !heroSection) return;
+  if (!canvas) return;
 
   const isMobile = window.matchMedia('(max-width: 860px)').matches;
   if (isMobile) return;
@@ -271,7 +270,7 @@ contactForm.addEventListener('submit', async (e) => {
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const ctx = canvas.getContext('2d');
   const colors = ['#ff9a00', '#ff3b30', '#ffb84d', '#ff6b57', '#ffd08a'];
-  const particleCount = 70;
+  const particleCount = 90;
   const repelRadius = 130;
 
   let particles = [];
@@ -283,9 +282,8 @@ contactForm.addEventListener('submit', async (e) => {
   let isVisible = true;
 
   function resize() {
-    const rect = heroSection.getBoundingClientRect();
-    width = rect.width;
-    height = rect.height;
+    width = window.innerWidth;
+    height = window.innerHeight;
     const dpr = window.devicePixelRatio || 1;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
@@ -354,9 +352,8 @@ contactForm.addEventListener('submit', async (e) => {
   }
 
   function handleMouseMove(e) {
-    const rect = heroSection.getBoundingClientRect();
-    mouseX = e.clientX - rect.left;
-    mouseY = e.clientY - rect.top;
+    mouseX = e.clientX;
+    mouseY = e.clientY;
   }
 
   function handleMouseLeave() {
@@ -371,21 +368,15 @@ contactForm.addEventListener('submit', async (e) => {
     draw();
   } else {
     rafId = requestAnimationFrame(step);
-    heroSection.addEventListener('mousemove', handleMouseMove);
-    heroSection.addEventListener('mouseleave', handleMouseLeave);
+    window.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleMouseLeave);
 
-    const heroObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          isVisible = entry.isIntersecting;
-          if (isVisible && rafId === null) {
-            rafId = requestAnimationFrame(step);
-          }
-        });
-      },
-      { threshold: 0 }
-    );
-    heroObserver.observe(heroSection);
+    document.addEventListener('visibilitychange', () => {
+      isVisible = document.visibilityState === 'visible';
+      if (isVisible && rafId === null) {
+        rafId = requestAnimationFrame(step);
+      }
+    });
   }
 
   window.addEventListener('resize', () => {
