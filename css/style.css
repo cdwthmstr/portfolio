@@ -235,10 +235,6 @@ h1, h2, h3 {
 }
 
 .navbar .logo {
-  position: absolute;
-  left: 150px;
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 101;
 }
 
@@ -1427,11 +1423,6 @@ h1, h2, h3 {
 
   .navbar-inner .status-pill {
     display: none;
-  }
-
-  .navbar .logo {
-    position: static;
-    transform: none;
   }
 
   .nav-links {
