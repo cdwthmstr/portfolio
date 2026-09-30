@@ -1199,6 +1199,8 @@ h1, h2, h3 {
 .team-member-thumb .member-redacted {
   position: static;
   display: inline-block;
+  padding: 0;
+  background: none;
   filter: blur(4px);
   transition: filter 0.3s ease;
 }
