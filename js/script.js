@@ -171,27 +171,33 @@ document.querySelectorAll('.filter-group').forEach((group) => {
   const cards = document.querySelectorAll(group.dataset.target);
   const isTimeline = group.dataset.target === '.timeline-row';
   const limit = group.dataset.limit ? parseInt(group.dataset.limit, 10) : null;
+  const increment = limit || 5;
   const showMoreBtn = document.querySelector(`[data-show-more-for="${group.dataset.target}"]`);
-  let showAll = false;
+  let visibleCount = limit;
+
+  function countMatches(filter) {
+    let total = 0;
+    cards.forEach((card) => {
+      if (filter === 'all' || card.dataset.category === filter) total += 1;
+    });
+    return total;
+  }
 
   function applyFilter(filter) {
-    let totalMatches = 0;
-    cards.forEach((card) => {
-      if (filter === 'all' || card.dataset.category === filter) totalMatches += 1;
-    });
+    const totalMatches = countMatches(filter);
 
     let seen = 0;
     cards.forEach((card) => {
       const matches = filter === 'all' || card.dataset.category === filter;
       if (matches) seen += 1;
-      const withinLimit = !limit || showAll || seen <= limit;
+      const withinLimit = !limit || seen <= visibleCount;
       card.classList.toggle('hidden', !(matches && withinLimit));
     });
 
     if (showMoreBtn) {
       const needsToggle = limit && totalMatches > limit;
       showMoreBtn.classList.toggle('hidden', !needsToggle);
-      showMoreBtn.textContent = showAll ? 'Show Less' : 'Show More';
+      showMoreBtn.textContent = visibleCount >= totalMatches ? 'Show Less' : 'Show More';
     }
 
     if (isTimeline && timelineBadge) {
@@ -203,16 +209,19 @@ document.querySelectorAll('.filter-group').forEach((group) => {
     tab.addEventListener('click', () => {
       tabs.forEach((t) => t.classList.remove('active'));
       tab.classList.add('active');
-      showAll = false;
+      visibleCount = limit;
       applyFilter(tab.dataset.filter);
     });
   });
 
   if (showMoreBtn) {
     showMoreBtn.addEventListener('click', () => {
-      showAll = !showAll;
       const activeTab = group.querySelector('.filter-tab.active');
-      applyFilter(activeTab ? activeTab.dataset.filter : 'all');
+      const filter = activeTab ? activeTab.dataset.filter : 'all';
+      const totalMatches = countMatches(filter);
+
+      visibleCount = visibleCount >= totalMatches ? limit : Math.min(visibleCount + increment, totalMatches);
+      applyFilter(filter);
     });
   }
 
