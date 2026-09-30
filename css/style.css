@@ -1192,10 +1192,6 @@ h1, h2, h3 {
   transition: filter 0.3s ease;
 }
 
-.member-inactive:hover img {
-  filter: grayscale(0%) blur(0);
-}
-
 .team-member-thumb .member-redacted {
   position: static;
   display: inline-block;
