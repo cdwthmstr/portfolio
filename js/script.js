@@ -115,10 +115,12 @@ const teamModalClose = document.getElementById('teamModalClose');
 if (teamModal && teamCreditBtn) {
   teamCreditBtn.addEventListener('click', () => {
     teamModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
   });
 
   function closeTeamModal() {
     teamModal.classList.remove('open');
+    document.body.style.overflow = '';
   }
 
   teamModalClose.addEventListener('click', closeTeamModal);
