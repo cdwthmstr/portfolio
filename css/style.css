@@ -852,8 +852,8 @@ h1, h2, h3 {
 }
 
 .accordion-item.open .accordion-body {
-  max-height: 320px;
-  padding: 0 4px 28px;
+  max-height: 500px;
+  padding: 0 4px 32px;
 }
 
 .accordion-body p {
